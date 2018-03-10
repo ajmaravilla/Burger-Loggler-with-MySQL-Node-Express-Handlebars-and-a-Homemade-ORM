@@ -1,0 +1,48 @@
+<div class='container text-center'>
+  <div class='row'>
+    <!-- top row for heading -->
+    <div class='col-12 bg-warning'>
+      <h1>Burger Wish List</h1>
+      <h3>Keep track of the burgers you wish to eat and have eaten!</h3>
+    </div>
+  </div>
+  <div class='row'>
+    <!-- left column, burger orders -->
+    <div class='col-6'>
+      <h5>My Burger Wish List</h5>
+      {{#each burgerData}} {{#unless devoured}}
+      <div>
+        <pre>{{id}}. {{burger_name}}</pre>
+      </div>
+      <!-- left column, burger list with button to devour -->
+      <div>
+        <form class='devour-form'>
+          <input class='burgerID' type='hidden' type='text' value='{{id}}'>
+          <br>
+          <button class='devourIt' type='submit' data-id='{{id}}'>ATE IT!</button>
+        </form>
+      </div>
+      {{/unless}} {{/each}}
+    </div>
+    <!-- right column, burger list of devoured -->
+    <div class='col-6'>
+      <h5>Burgers I've Had'</h5>
+      {{#each burgerData}} {{#if devoured}}
+      <input type='text' placeholder='{{id}} . {{burger_name}}' readonly>
+      <br> {{/if}} {{/each}}
+    </div>
+  </div>
+</div>
+
+<!-- bottom row for new burger form -->
+<div class='container text-center'>
+  <div class='row'>
+    <div class='col-12 bg-warning'>
+      <p>Type the name of the burger you want to add to your list. Click 'Submit' to add it to your list.</p>
+      <form action='/burgers/create' method='POST'>
+        <input type='text' name='burger_name' id='orderB'>
+        <buttom class='orderBurger' type='submit'>Submit</buttom>
+      </form>
+    </div>
+  </div>
+</div>
