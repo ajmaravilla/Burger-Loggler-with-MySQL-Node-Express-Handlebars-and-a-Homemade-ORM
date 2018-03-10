@@ -1,0 +1,26 @@
+{
+  "name": "Burger-Loggler-with-MySQL-Node-Express-Handlebars-and-a-Homemade-ORM",
+  "version": "1.0.0",
+  "description": "In this assignment, I'll create a burger logger with MySQL, Node, Express, Handlebars and a homemade ORM.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ajmaravilla/Burger-Loggler-with-MySQL-Node-Express-Handlebars-and-a-Homemade-ORM.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ajmaravilla/Burger-Loggler-with-MySQL-Node-Express-Handlebars-and-a-Homemade-ORM/issues"
+  },
+  "homepage": "https://github.com/ajmaravilla/Burger-Loggler-with-MySQL-Node-Express-Handlebars-and-a-Homemade-ORM#readme",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-handlebars": "^3.0.0",
+    "mysql": "^2.15.0"
+  }
+}
